@@ -40,34 +40,35 @@ h2 {
 form {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 5px 15px;
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid gray;
 }
 
-.tasks li {
-  display: flex;
-  gap: 5px;
-}
-
 form input {
   border: 0 solid;
-  height: 20px;
-  width: 160px;
   color: #ccc;
+  width: 90%;
+  height: 50px;
+}
+
+form i {
+  transform: rotate(90deg);
+}
+
+.tasks li {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid gray;
 }
 
 .task {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-}
-
-.tasks li {
-  padding: 15px;
-  border-bottom: 1px solid gray;
+  width: 95%;
 }
 
 button {
@@ -78,4 +79,9 @@ button {
   border-radius: 5px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+::placeholder {
+  font-size: 18px;
+  padding-left: 15px;
 }

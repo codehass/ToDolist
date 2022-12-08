@@ -1,35 +1,41 @@
-import _ from 'lodash';
 import './style.css';
 
 const tasks = [
   {
-    description: 'A',
-    completed: '1',
-    index: '1',
+    description: 'task A',
+    completed: true,
+    index: 1,
   },
   {
-    description: 'A',
-    completed: '1',
-    index: '2',
+    description: 'task B',
+    completed: true,
+    index: 2,
   },
   {
-    description: 'A',
-    completed: '1',
-    index: '',
+    description: 'task C',
+    completed: false,
+    index: 4,
   },
   {
-    description: 'A',
-    completed: '1',
-    index: '3',
+    description: 'task D',
+    completed: false,
+    index: 3,
   },
 ];
 
-// function component() {
+const Tasks = document.querySelector('.tasks');
+const sortTasks = tasks.sort((a, b) => a.index - b.index);
 
-// Lodash, now imported by this script
-//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+function listTasks() {
+  sortTasks.forEach((i) => {
+    Tasks.innerHTML += `<li>
+    <input type="checkbox" />
+    <div class="task">
+      <p>${i.description}</p>
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+  </li>`;
+  });
+}
 
-//   return element;
-// }
-
-// document.body.appendChild(component());
+listTasks();
