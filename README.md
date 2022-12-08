@@ -114,20 +114,11 @@ Clone this repository to your desired folder:
 
 <!-- Author -->
 
-👤 **Author-01**
+👤 **Author**
 
 - GitHub: [@codehass](https://github.com/codehass)
 - Twitter: [@hassanelourdy](https://twitter.com/hassanelourdy)
 - LinkedIn: [Hassan El OUARDY](https://www.linkedin.com/in/hassan-el-ouardy-360b99169/)
-
-👤 **Author-02**
-
-- GitHub: [@App-Developer8866](https://github.com/App-Developer8866/)
-- Twitter: [@MMuttrafRasool](https://twitter.com/MMuttrafRasool)
-- LinkedIn: [Muhammad Muttraf Rasool](https://www.linkedin.com/in/muhammad-muttraf-rasool-421819202)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 
 <!-- CONTRIBUTING -->
