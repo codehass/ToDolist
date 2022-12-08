@@ -1,13 +1,35 @@
 import _ from 'lodash';
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+const tasks = [
+  {
+    description: 'A',
+    completed: '1',
+    index: '1',
+  },
+  {
+    description: 'A',
+    completed: '1',
+    index: '2',
+  },
+  {
+    description: 'A',
+    completed: '1',
+    index: '',
+  },
+  {
+    description: 'A',
+    completed: '1',
+    index: '3',
+  },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+// function component() {
 
-  return element;
-}
+// Lodash, now imported by this script
+//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-document.body.appendChild(component());
+//   return element;
+// }
+
+// document.body.appendChild(component());

@@ -3,9 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wbpack Exercise</title>
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ***  -->
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5da2948a10.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Do Do list</title>
   </head>
   <body>
-    <h1>Hello webpack!</h1>
+    <div class="container">
+      <header>
+        <h2>Today's To Do</h2>
+        <i class="fa-solid fa-arrows-rotate"> </i>
+      </header>
+
+      <form action="">
+        <input type="text" placeholder="Add to your list" />
+        <i class="fa-solid fa-arrow-left"></i>
+      </form>
+
+      <ul class="tasks">
+        <li>
+          <input type="checkbox" />
+          <div class="task">
+            <p>Wash the dishes</p>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" />
+          <div class="task">
+            <p>Complete To Do list project</p>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </li>
+      </ul>
+      <button>Clear All completed</button>
+    </div>
   </body>
 </html>
