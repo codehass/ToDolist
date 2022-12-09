@@ -8,9 +8,7 @@ export default class Interact {
     MainFunc.genList();
   };
 
-  static checkStatusEvent = () =>
-    document.querySelectorAll('.check').forEach((checkbox) =>
-      checkbox.addEventListener('change', () => {
+  static checkStatusEvent = () => document.querySelectorAll('.check').forEach((checkbox) => checkbox.addEventListener('change', () => {
         let checkstat;
         let id;
         if (checkbox.id > 0) {
