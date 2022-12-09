@@ -1,5 +1,4 @@
 import './style.css';
-
 import MainFunc from './modules/method.js';
 import Interact from './modules/interaction.js';
 
