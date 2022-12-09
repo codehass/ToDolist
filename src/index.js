@@ -1,41 +1,23 @@
 import './style.css';
+import MainFunc from './method.js';
+import Interact from './interaction.js';
 
-const tasks = [
-  {
-    description: 'task A',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'task B',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'task C',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'task D',
-    completed: false,
-    index: 3,
-  },
-];
+const userInput = document.querySelector('.add-item');
+const addActivity = document.querySelector('.add-activity');
 
-const Tasks = document.querySelector('.tasks');
-const sortTasks = tasks.sort((a, b) => a.index - b.index);
+userInput.addEventListener('submit', (e) => {
+  e.preventDefault();
+  MainFunc.addTodo(addActivity.value);
+  addActivity.value = '';
+});
 
-function listTasks() {
-  sortTasks.forEach((i) => {
-    Tasks.innerHTML += `<li>
-    <input type="checkbox" />
-    <div class="task">
-      <p>${i.description}</p>
-      <i class="fa-solid fa-ellipsis-vertical"></i>
-    </div>
-  </li>`;
-  });
-}
+document.querySelector('.clearBtn').addEventListener('click', Interact.clearCompleted);
 
-listTasks();
+window.addEventListener('load', () => {
+  document.addEventListener('listUpdated', () => {
+    Interact.checkStatusEvent();
+  }, false);
+  Interact.checkStatusEvent();
+});
+
+MainFunc.genList();

@@ -1,87 +1,157 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Lato', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  background-color: rgb(245, 242, 240);
+  padding: 0;
+  margin: 0;
+  background-color: #d3d3d3;
 }
 
-li {
-  list-style: none;
+.item-list {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-start;
 }
 
-.container {
-  position: absolute;
-  left: 30%;
-  top: 30%;
-  width: 40%;
-  margin: auto;
+.toDoList {
+  margin: 80px auto;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 10px 10px;
   background-color: #fff;
   border-radius: 5px;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  border-bottom: 1px solid gray;
-}
-
-h2 {
-  font-size: 20px;
-  line-height: 1.8;
-}
-
-form {
-  display: flex;
-  align-items: center;
-  padding: 5px 15px;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 1px solid gray;
-}
-
-form input {
-  border: 0 solid;
-  color: #ccc;
-  width: 90%;
-  height: 50px;
-}
-
-form i {
-  transform: rotate(90deg);
-}
-
-.tasks li {
-  display: flex;
-  gap: 15px;
-  padding: 15px;
-  border-bottom: 1px solid gray;
-}
-
-.task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-}
-
-button {
-  width: 100%;
-  border: none;
-  background: #e2ddddb8;
-  padding: 15px;
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
 ::placeholder {
-  font-size: 18px;
-  padding-left: 15px;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.refresh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 10px;
+  border-bottom: 0.01px solid #d3d3d3;
+}
+
+.refresh p {
+  padding: 4px;
+  font-size: 16px;
+}
+
+i {
+  color: rgb(147, 147, 147);
+}
+
+.taskinout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.01px solid #d3d3d3;
+  padding: 4px 10px;
+}
+
+.taskinout button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.taskinout i {
+  rotate: 90deg;
+}
+
+.add-item {
+  border-bottom: 0.01px solid #d3d3d3;
+}
+
+.add-activity {
+  border: none;
+  font-size: 16px;
+  padding: 15px;
+  width: 94%;
+}
+
+.clear {
+  text-align: center;
+}
+
+.clearBtn {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.clearBtn:hover {
+  background-color: #d3d3d3;
+}
+
+.to-do-list {
+  background: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+  list-style: none;
+  border-bottom: 0.01px solid #d3d3d3;
+}
+
+.remove-edit {
+  display: flex;
+  justify-items: flex-end;
+  margin-left: auto;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+input {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.todo {
+  height: 40px;
+  width: 94%;
+  padding-left: 5px;
+  border: none;
+  font-size: 17px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.todocompleted {
+  text-decoration: line-through;
+  border: none;
+  font-size: 17px;
+  width: 94%;
+  padding-left: 5px;
+  color: rgb(155, 155, 155);
+}
+
+.btn-edit {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn-remove {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.check {
+  cursor: pointer;
+}
+
+.pen {
+  width: 90px;
+  height: 90px;
+  color: black;
 }
