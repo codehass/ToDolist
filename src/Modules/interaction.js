@@ -9,25 +9,26 @@ export default class Interact {
   };
 
   static checkStatusEvent = () => document.querySelectorAll('.check').forEach((checkbox) => checkbox.addEventListener('change', () => {
-        let checkstat;
-        let id;
-        if (checkbox.id > 0) {
-          id = checkbox.id - 1;
-        } else {
-          id = 0;
-        }
+    let checkstat;
+    let id;
+    if (checkbox.id > 0) {
+    id = checkbox.id - 1;
+    } else {
+    id = 0;
+    }
 
-        if (checkbox.checked === true) {
-          checkstat = true;
-        } else if (checkbox.checked !== true) {
-          checkstat = false;
-        }
+    if (checkbox.checked === true) {
+    checkstat = true;
+    } else if (checkbox.checked !== true) {
+    checkstat = false;
+    }
 
-        this.changeCompletedToDo(checkstat, id);
-      })
+    this.changeCompletedToDo(checkstat, id);
+    }),
     );
 
-  static clearCompleted = () => {let taskList = MainFunc.getListFromStorage();
+  static clearCompleted = () => { 
+    let taskList = MainFunc.getListFromStorage();
 
     taskList = taskList.filter((item) => item.completed !== true);
     MainFunc.indexNew(taskList);
