@@ -65,7 +65,7 @@ export default class MainFunc {
         }
         this.deleteListItem(id);
         this.genList();
-      })
+      }),
     );
   };
 
@@ -141,10 +141,10 @@ export default class MainFunc {
           document.getElementById(idItem).setAttribute('readonly', 'readonly');
           this.inputUpdate(
             document.getElementById(idItem).value,
-            Number(idItem.replace('TEST', '')) - 1
+            Number(idItem.replace('TEST', '')) - 1,
           );
         }
-      })
+      }),
     );
   };
 
@@ -178,7 +178,7 @@ export default class MainFunc {
         itemId.focus();
         itemId.style.background = '#d3d3d3';
         listItem.querySelector('.btn-remove').style.display = 'block';
-      })
+      }),
     );
   };
 }
