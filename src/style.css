@@ -37,7 +37,7 @@ h2 {
   line-height: 1.8;
 }
 
-form {
+.form {
   display: flex;
   align-items: center;
   padding: 5px 15px;
@@ -46,15 +46,27 @@ form {
   border-bottom: 1px solid gray;
 }
 
-form input {
+.form input {
   border: 0 solid;
   color: #ccc;
   width: 90%;
   height: 50px;
 }
 
-form i {
+.input {
+  font-size: 18px;
+  padding-left: 15px;
+  color: #0b0808;
+}
+
+.form i {
   transform: rotate(90deg);
+}
+
+.sub {
+  width: 40px;
+  background: #fff;
+  cursor: pointer;
 }
 
 .tasks li {
@@ -69,6 +81,10 @@ form i {
   justify-content: space-between;
   align-items: center;
   width: 95%;
+}
+
+.delet {
+  display: none;
 }
 
 button {
