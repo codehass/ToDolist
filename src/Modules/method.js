@@ -65,7 +65,7 @@ export default class MainFunc {
         }
         this.deleteListItem(id);
         this.genList();
-      });
+      }),
     );
   };
 
