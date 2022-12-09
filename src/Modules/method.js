@@ -139,9 +139,7 @@ export default class MainFunc {
           }
 
           document.getElementById(idItem).setAttribute('readonly', 'readonly');
-          this.inputUpdate(
-            document.getElementById(idItem).value,
-            Number(idItem.replace('TEST', '')) - 1,
+          this.inputUpdate(document.getElementById(idItem).value,Number(idItem.replace('TEST', '')) - 1;
           );
         }
       });)
