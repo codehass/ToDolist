@@ -54,8 +54,7 @@ export default class MainFunc {
 
   // remove N ELEMENT
   static listRemoveBtn = () => {
-    document.querySelectorAll('.btn-remove').forEach((button) =>
-      button.addEventListener('click', (event) => {
+    document.querySelectorAll('.btn-remove').forEach((button) => button.addEventListener('click', (event) => {
         event.preventDefault();
         let id;
         if (button.id > 0) {
@@ -65,8 +64,7 @@ export default class MainFunc {
         }
         this.deleteListItem(id);
         this.genList();
-      })
-    );
+      }));
   };
 
   // DYNAMIC SECTION
@@ -124,8 +122,7 @@ export default class MainFunc {
 
   // update the event
   static updateBtnEvent = () => {
-    document.querySelectorAll('.todo').forEach((input) =>
-      input.addEventListener('keypress', (event) => {
+    document.querySelectorAll('.todo').forEach((input) => input.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
           event.preventDefault();
           const idIput = 'TEST';
@@ -139,18 +136,14 @@ export default class MainFunc {
           }
 
           document.getElementById(idItem).setAttribute('readonly', 'readonly');
-          this.inputUpdate(
-            document.getElementById(idItem).value,Number(idItem.replace('TEST', '')) - 1);
+          this.inputUpdate(document.getElementById(idItem).value, Number(idItem.replace('TEST', '')) - 1);
         }
-      })
-    );
+      }));
   };
 
   static editListItem = () => {
     let previousList = null;
-    document.querySelectorAll('.btn-edit').forEach((button) =>
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
+    document.querySelectorAll('.btn-edit').forEach((button) => button.addEventListener('click', (event) => { event.preventDefault();
         const idIput = 'TEST';
         const idSelect = event.currentTarget.id;
         let idItem;
@@ -176,7 +169,6 @@ export default class MainFunc {
         itemId.focus();
         itemId.style.background = '#d3d3d3';
         listItem.querySelector('.btn-remove').style.display = 'block';
-      })
-    );
+      }));
   };
 }
