@@ -27,8 +27,7 @@ export default class Interact {
       })
     );
 
-  static clearCompleted = () => {
-    let taskList = MainFunc.getListFromStorage();
+  static clearCompleted = () => {let taskList = MainFunc.getListFromStorage();
 
     taskList = taskList.filter((item) => item.completed !== true);
     MainFunc.indexNew(taskList);
