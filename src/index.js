@@ -1,6 +1,6 @@
 import './style.css';
-import MainFunc from './modules/method.js';
-import Interact from './modules/interaction.js';
+import MainFunc from './method.js';
+import Interact from './interaction.js';
 
 const userInput = document.querySelector('.add-item');
 const addActivity = document.querySelector('.add-activity');
