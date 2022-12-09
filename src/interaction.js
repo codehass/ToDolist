@@ -37,4 +37,3 @@ export default class Interact {
       MainFunc.genList();
     }
 }
-
