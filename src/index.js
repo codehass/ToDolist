@@ -1,6 +1,6 @@
 import './style.css';
 
-import MainFunc from './modules/method.js';
+import MainFunc from './method.js';
 
 const userInput = document.querySelector('.add-item');
 const addActivity = document.querySelector('.add-activity');
