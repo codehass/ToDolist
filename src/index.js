@@ -1,41 +1,14 @@
 import './style.css';
 
-const tasks = [
-  {
-    description: 'task A',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'task B',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'task C',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'task D',
-    completed: false,
-    index: 3,
-  },
-];
+import MainFunc from './method.js';
 
-const Tasks = document.querySelector('.tasks');
-const sortTasks = tasks.sort((a, b) => a.index - b.index);
+const userInput = document.querySelector('.add-item');
+const addActivity = document.querySelector('.add-activity');
 
-function listTasks() {
-  sortTasks.forEach((i) => {
-    Tasks.innerHTML += `<li>
-    <input type="checkbox" />
-    <div class="task">
-      <p>${i.description}</p>
-      <i class="fa-solid fa-ellipsis-vertical"></i>
-    </div>
-  </li>`;
-  });
-}
+userInput.addEventListener('submit', (e) => {
+  e.preventDefault();
+  MainFunc.addTodo(addActivity.value);
+  addActivity.value = '';
+});
 
-listTasks();
+MainFunc.genList();

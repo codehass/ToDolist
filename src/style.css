@@ -1,41 +1,150 @@
-import './style.css';
-
-const tasks = [
-  {
-    description: 'task A',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'task B',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'task C',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'task D',
-    completed: false,
-    index: 3,
-  },
-];
-
-const Tasks = document.querySelector('.tasks');
-const sortTasks = tasks.sort((a, b) => a.index - b.index);
-
-function listTasks() {
-  sortTasks.forEach((i) => {
-    Tasks.innerHTML += `<li>
-    <input type="checkbox" />
-    <div class="task">
-      <p>${i.description}</p>
-      <i class="fa-solid fa-ellipsis-vertical"></i>
-    </div>
-  </li>`;
-  });
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #d3d3d3;
 }
 
-listTasks();
+.item-list {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.toDoList {
+  margin: 10%;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 10px;
+  background-color: #fff;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.refresh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 10px;
+  border-bottom: 0.01px solid #d3d3d3;
+}
+
+.refresh p {
+  padding: 4px;
+  font-size: 16px;
+}
+
+i {
+  color: rgb(147, 147, 147);
+}
+
+.taskinout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.01px solid #d3d3d3;
+  padding: 4px 10px;
+}
+
+.taskinout i {
+  rotate: 90deg;
+}
+
+.add-item {
+  border-bottom: 0.01px solid #d3d3d3;
+}
+
+.add-activity {
+  border: none;
+  font-size: 16px;
+  padding: 15px;
+  width: 94%;
+}
+
+.clear {
+  text-align: center;
+}
+
+.clearBtn {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.clearBtn:hover {
+  background-color: #d3d3d3;
+}
+
+.to-do-list {
+  background: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+  list-style: none;
+  border-bottom: 0.01px solid #d3d3d3;
+}
+
+.remove-edit {
+  display: flex;
+  justify-items: flex-end;
+  margin-left: auto;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+input {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.todo {
+  height: 40px;
+  width: 94%;
+  padding-left: 5px;
+  border: none;
+  font-size: 17px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.todocompleted {
+  text-decoration: line-through;
+  border: none;
+  font-size: 17px;
+  width: 94%;
+  padding-left: 5px;
+  color: rgb(155, 155, 155);
+}
+
+.btn-edit {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn-remove {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.check {
+  cursor: pointer;
+}
+
+.pen {
+  width: 90px;
+  height: 90px;
+  color: black;
+}
