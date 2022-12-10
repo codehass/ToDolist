@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ***  -->
-    <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/5da2948a10.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Do Do list</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h2>Today's To Do</h2>
-        <i class="fa-solid fa-arrows-rotate"> </i>
-      </header>
-      <div class="form">
-        <input type="text" class="input" placeholder="Add to your list" />
-        <input type="submit" class="sub" value="Add Task" />
-        <!-- <i class="sub fa fa-arrow-turn-down icon"></i> -->
-        <!-- <button type="submit" class="sub">
-    <i class="fa fa-arrow-turn-down icon"></i>
-  </button> -->
-      </div>
-      <!-- <form action=""></form> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>To do list</title>
+</head>
+<body>
+    <main>
+        <div class="toDoList">
+            <div class="refresh">
+                <p> Today's to do</p>
+                <i class="fa fa-arrows-rotate icon"></i>
+            </div>
+            <form action="" class="add-item" method="post">
+                <div class="taskinout">
+                    <input type="text" placeholder="Add to your list..." class="add-activity" required maxlength="50">
+                    <button type="submit"> <i class="fa fa-arrow-turn-down icon"></i> </button>
+                </div>
+                
+            </form>
+            
+            <!-- this section is dynamic -->
+            <div class="toDoSection">
+                <!-- THIS SECTION FOR THE RO DO LIST -->
+            </div>
 
-      <!-- Add Tasks  -->
-      <ul class="tasks"></ul>
-      <button>Clear All completed</button>
-    </div>
-  </body>
+            <div class="clear">
+                <button class="clearBtn" type="button">Clear all completed</button>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
+
+
